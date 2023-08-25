@@ -16,18 +16,18 @@
       </div>
       <div class="column">
         <a href="https://pinia.vuejs.org" target="_blank">
-          <img src="/pinia.svg" width="64" height="96" alt="vue logo">
+          <img src="/pinia.svg" width="64" height="96" alt="pinia logo">
         </a>
       </div>
       <div class="column ">
         <a href="https://router.vuejs.org" target="_blank">
-          <img src="/vue.svg" width="96" height="96" alt="vue logo">
+          <img src="/vue.svg" width="96" height="96" alt="vue router logo">
           <h1 class="title has-text-grey">Vue Router</h1>
         </a>
       </div>
       <div class="column mt-5">
         <a href="https://firebase.google.com" target="_blank">
-          <img src="/firebase.svg" alt="vue logo">
+          <img src="/firebase.svg" alt="firebase logo">
         </a>
       </div>
     </div>

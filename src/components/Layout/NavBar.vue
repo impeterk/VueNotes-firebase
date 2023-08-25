@@ -28,6 +28,9 @@
           </RouterLink>
           <RouterLink to="/about" @click="showMobileNav = !showMobileNav" class="navbar-item" active-class="is-active">
             About</RouterLink>
+          <a href="https://github.com/impeterk/VueNotes-firebase" @click="showMobileNav = !showMobileNav"
+            class="navbar-item image has-text-white" active-class="is-active" target="_blank">
+            <img src="/github.svg" alt="github icon"></a>
           <!-- <div class="navbar-item is-pulled-right"> -->
           <!--   <input id="switchColorInfo" :checked="themeStore.getTheme" type="checkbox" name="switchColorInfo" -->
           <!--     class="switch is-rounded is-info" @click="themeStore.switchTheme" /> -->
