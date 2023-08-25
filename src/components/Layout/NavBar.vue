@@ -1,76 +1,38 @@
 <template>
-  <nav
-    class="navbar"
-    :class="themeStore.darkTheme ? 'is-dark' : 'is-info'"
-    role="navigation"
-    aria-label="main navigation"
-  >
+  <nav class="navbar" :class="themeStore.darkTheme ? 'is-dark' : 'is-info'" role="navigation"
+    aria-label="main navigation">
     <div class="container is-max-desktop px-2">
       <div class="navbar-brand">
-        <title
-          class="navbar-item is-size-4 has-text-weight-medium is-family-monospace"
-        >
-          &lt VueNotes /&gt
+        <title class="navbar-item is-size-4 has-text-weight-medium is-family-monospace">
+          {{ `
+          <FireVueNotes />`}}
         </title>
 
-        <a
-          @click.prevent="showMobileNav = !showMobileNav"
-          ref="navBarBurger"
-          role="button"
-          class="navbar-burger"
-          :class="{ 'is-active': showMobileNav }"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
+        <a @click.prevent="showMobileNav = !showMobileNav" ref="navBarBurger" role="button" class="navbar-burger"
+          :class="{ 'is-active': showMobileNav }" aria-label="menu" aria-expanded="false"
+          data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div
-        ref="navBarMenu"
-        id="navbarBasicExample"
-        class="navbar-menu"
-        :class="{ 'is-active': showMobileNav }"
-      >
+      <div ref="navBarMenu" id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showMobileNav }">
         <div class="navbar-start ml-3 is-align-items-center">
-          <button
-            v-if="storeAuth.user.id"
-            type="button"
-            class="button is-small is-danger"
-            @click="logout"
-          >
+          <button v-if="storeAuth.user.id" type="button" class="button is-small is-danger" @click="logout">
             Logout {{ storeAuth.user.email }}
           </button>
         </div>
         <div class="navbar-end">
-          <RouterLink
-            to="/"
-            @click="showMobileNav = !showMobileNav"
-            class="navbar-item"
-            active-class="is-active"
-            >Notes</RouterLink
-          >
-          <RouterLink
-            to="/about"
-            @click="showMobileNav = !showMobileNav"
-            class="navbar-item"
-            active-class="is-active"
-            >About</RouterLink
-          >
-          <div class="navbar-item is-pulled-right">
-            <input
-              id="switchColorInfo"
-              :checked="themeStore.getTheme"
-              type="checkbox"
-              name="switchColorInfo"
-              class="switch is-rounded is-info"
-              @click="themeStore.switchTheme"
-            />
-            <label for="switchColorInfo">Dark Mode</label>
-          </div>
+          <RouterLink to="/" @click="showMobileNav = !showMobileNav" class="navbar-item" active-class="is-active">Notes
+          </RouterLink>
+          <RouterLink to="/about" @click="showMobileNav = !showMobileNav" class="navbar-item" active-class="is-active">
+            About</RouterLink>
+          <!-- <div class="navbar-item is-pulled-right"> -->
+          <!--   <input id="switchColorInfo" :checked="themeStore.getTheme" type="checkbox" name="switchColorInfo" -->
+          <!--     class="switch is-rounded is-info" @click="themeStore.switchTheme" /> -->
+          <!--   <label for="switchColorInfo">Dark Mode</label> -->
+          <!-- </div> -->
         </div>
       </div>
     </div>
@@ -129,6 +91,7 @@ const logout = () => {
     left: 0;
     width: 100%;
   }
+
   .navbar-item.is-active {
     color: hsl(204, 86%, 53%) !important;
   }
