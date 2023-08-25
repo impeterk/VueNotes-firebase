@@ -18,7 +18,7 @@
         <h2 class="subtitle">Login with email and password</h2>
       </div>
       <div v-if="registerRef">
-        <h2 class="subtitle">Create new account to eplore all features of this application</h2>
+        <h2 class="subtitle">Create an account</h2>
         <p class="content">Create new notes, store them in online database and access on any device</p>
 
       </div>
